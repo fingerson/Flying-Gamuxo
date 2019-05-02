@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Level.gd" type="Script" id=1]
+[ext_resource path="res://Pilares.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Gamuxo.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1007.18, 10 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Pilares" type="Node2D" parent="."]
+
+[node name="Pilares" parent="Pilares" instance=ExtResource( 2 )]
+
+[node name="Pilares2" parent="Pilares" instance=ExtResource( 2 )]
+position = Vector2( 350, -129.817 )
+
+[node name="Pilares3" parent="Pilares" instance=ExtResource( 2 )]
+position = Vector2( 700, 148.362 )
+
+[node name="Pilares4" parent="Pilares" instance=ExtResource( 2 )]
+position = Vector2( 1050, 186.767 )
+
+[node name="Pilares5" parent="Pilares" instance=ExtResource( 2 )]
+position = Vector2( 1400, 186.767 )
+
+[node name="Gamuxo" parent="." instance=ExtResource( 3 )]
+position = Vector2( -461.699, 287.726 )
+
+[node name="Limites" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites"]
+position = Vector2( 9.8219, -8.59416 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limites"]
+position = Vector2( 99.4572, 609.58 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 789.544
+margin_top = 467.484
+margin_right = 829.544
+margin_bottom = 481.484
+rect_scale = Vector2( 5.28792, 5.23137 )
+
